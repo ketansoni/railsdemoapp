@@ -1,0 +1,15 @@
+application: ordermerchantrails
+version: 1
+runtime: rails
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /stylesheets
+ static_dir: stylesheets
+- url: /images
+  static_dir: images
+- url: /.*
+  script: common.urls.app
+ builtins:
+ - remote_api: on
