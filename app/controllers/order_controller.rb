@@ -12,7 +12,7 @@ class OrderController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @item = Item.find(@order.item_id)
-    render :json => {:order_id => @order.id , :item_name => @item.name , :status => @order.status, :quantity => @order.quantity, :address => @order.address}
+    render :json => {:order_id => @order.id , :item_name => @item.name , :status => @order.status, :quantity => @order.quantity, :address => @order.address, :customer_name => @order.customer_name}
   end
 
   def update
