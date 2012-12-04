@@ -5,3 +5,4 @@ Feature: place order online
     Given I visit the order merchant site
     When I place an order
     Then order should get placed successfully
+    And merchant delivers the order
